@@ -9,24 +9,7 @@
 </head>
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <a class="logo" href="#">
-    <div class="logo-icon">
-      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-    </div>
-    BRILIAN
-  </a>
-  <ul class="nav-links">
-    <li><a href="#">Beranda</a></li>
-    <li><a href="#">Tentang Kami</a></li>
-    <li><a href="#">Layanan</a></li>
-    <li><a href="#">Sertifikasi</a></li>
-    <li><a href="#">Kontak</a></li>
-  </ul>
-  <button class="nav-cta">Konsultasi Gratis</button>
-</nav>
-
+<div id="navbar"></div>
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg-pattern"></div>
@@ -92,15 +75,15 @@
 
 <!-- LAYANAN -->
 <section class="services">
-  <span class="section-label reveal">Layanan Kami</span>
-  <h2 class="section-title reveal">Jenis Badan Usaha Jasa Konstruksi</h2>
+  <span class="section-labell reveal">Layanan Kami</span>
+  <h2 class="section-titlee reveal">Jenis Badan Usaha Jasa Konstruksi</h2>
   <div class="cards-grid">
     <div class="service-card reveal reveal-d1">
       <div class="card-img"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&auto=format&fit=crop&q=80" alt="Service 1"></div>
       <div class="card-body">
         <h3>Izin Usaha Jasa Pertambangan (IUJP)</h3>
         <p>IUJP adalah surat izin dari Ditjen Minerba bagi perusahaan yang bergerak di jasa pertambangan.</p>
-        <a href="#" class="card-link">Detail <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="iujp.html" class="card-link">Detail <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
     <div class="service-card reveal reveal-d2">
@@ -333,15 +316,6 @@
     if (!isOpen) item.classList.add('open');
   }
 
-  // Navbar scroll effect
-  const nav = document.querySelector('nav');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
-    } else {
-      nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
-    }
-  });
 
   // Smooth counter animation for stats
   function animateCounters() {
@@ -367,5 +341,24 @@
   }, { threshold: 0.5 });
   if (statsSection) statsObs.observe(statsSection);
 </script>
+
+<script>
+  fetch('navbar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+
+      const nav = document.querySelector('nav');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.12)';
+        } else {
+          nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
+        }
+      });
+    });
+</script>
+
 </body>
 </html>
