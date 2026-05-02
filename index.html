@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BRILIAN Consulting - Solusi Sertifikasi & Legalitas Konstruksi</title>
+<title>Fieldha Consulting - Solusi Sertifikasi & Legalitas Konstruksi</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -64,7 +64,7 @@
     <div class="about-text reveal-right">
       <span class="section-label">Tentang Kami</span>
       <h2>Partner Terpercaya Legalitas & Sertifikasi Solusi</h2>
-      <p>BRILIAN Consulting adalah perusahaan yang bergerak di bidang perizinan usaha, dan telah berpengalaman dalam membantu client mengurus izin usahanya.</p>
+      <p>Fieldha Consulting adalah perusahaan yang bergerak di bidang perizinan usaha, dan telah berpengalaman dalam membantu client mengurus izin usahanya.</p>
       <ul class="check-list">
         <li>Legal & Sesuai Regulasi</li>
         <li>Proses Cepat & Efisien</li>
@@ -301,7 +301,7 @@
       </div>
       <div class="contact-item">
         <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-        <span>brilianconculting@gmail.com</span>
+        <span>fieldhaconculting@gmail.com</span>
       </div>
     </div>
   </div>
@@ -315,6 +315,23 @@
 </footer>
 
 <script>
+
+  fetch('navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    // load JS setelah HTML masuk
+    const script = document.createElement('script');
+    script.src = 'navbar.js';
+
+    script.onload = () => {
+      initNavbar(); // jalanin setelah JS ready
+    };
+
+    document.body.appendChild(script);
+  });
+
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
@@ -355,19 +372,7 @@
   if (statsSection) statsObs.observe(statsSection);
 </script>
 
-<script>
-  fetch('navbar.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('navbar').innerHTML = data;
-      const nav = document.querySelector('nav');
-      window.addEventListener('scroll', () => {
-        nav.style.boxShadow = window.scrollY > 50
-          ? '0 4px 30px rgba(0,0,0,0.12)'
-          : '0 2px 20px rgba(0,0,0,0.06)';
-      });
-    });
-</script>
+
 
 </body>
 </html>
