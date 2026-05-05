@@ -386,6 +386,109 @@ tbody td:nth-child(3) {
 .proses-note p strong { color:var(--dark); font-weight:700; }
 
 /* ══════════════════════════════════
+   PELAKSANAAN KEGIATAN USAHA
+══════════════════════════════════ */
+.section-container {
+  padding: 60px 8%;
+  background: #f9f7fc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d1b4e;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header .icon {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.card-header h3 {
+  font-size: 20px;
+  color: #4a148c;
+}
+
+.card-content {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.card-content ul {
+  padding-left: 20px;
+}
+
+.card-content li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* DESKRIPSI */
+.section-desc {
+  color: #666;
+  max-width: 800px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* ANIMASI */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DELAY BIAR BERURUTAN */
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+.delay-3 { transition-delay: 0.6s; }
+
+/* HOVER LEBIH HALUS */
+.card {
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(106, 27, 154, 0.18);
+}
+
+/* ══════════════════════════════════
    CTA BANNER
 ══════════════════════════════════ */
 .cta-section {
@@ -750,6 +853,61 @@ footer {
 </section>
 
 <!-- ═══════════════════
+     PELAKSANAAN KEGIATAN USAHA-->
+<section class="section-container">
+  <h2 class="section-title fade-up">Pelaksanaan Kegiatan Usaha</h2>
+
+  <p class="section-desc fade-up delay-1">
+    Setelah mendapatkan penyetaraan Sertifikat Badan Usaha (SBU) yang dikeluarkan oleh LPJK dan Izin Usaha sebagai kantor perwakilan badan usaha jasa konstruksi asing, maka BUJKA dapat melakukan kegiatan usaha dan mengikuti tender untuk mengerjakan proyek pemerintah atau proyek konstruksi lainnya dengan ketentuan sebagai berikut.
+  </p>
+
+  <!-- A. KERJASAMA -->
+  <div class="card fade-up delay-2">
+    <div class="card-header">
+      <h3>A. Kerjasama Proyek</h3>
+    </div>
+
+    <div class="card-content grid-2">
+      <ul>
+        <li>BUJKA wajib membentuk JO dengan BUJK berdasarkan prinsip kesetaraan</li>
+        <li>Kerjasama dimulai dari pengadaan hingga penyelesaian proyek</li>
+        <li>Tanggung jawab bersama terhadap pengguna jasa</li>
+      </ul>
+
+      <ul>
+        <li>Berbentuk Perseroan Terbatas</li>
+        <li>Kepemilikan saham oleh WNI / pemerintah / BUMN</li>
+        <li>Memiliki SBU kualifikasi besar</li>
+        <li>Memiliki IUJK Nasional</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- B. KRITERIA -->
+  <div class="card fade-up delay-3">
+    <div class="card-header">
+      <h3>B. Kriteria Proyek</h3>
+    </div>
+
+    <div class="card-content grid-2">
+      <ul>
+        <li>APBN / APBD</li>
+        <li>Pinjaman</li>
+        <li>Hibah luar negeri</li>
+        <li>Penanaman modal asing</li>
+        <li>Dana swasta sesuai regulasi</li>
+      </ul>
+
+      <ul>
+        <li>Proyek berisiko besar & teknologi tinggi</li>
+        <li>Menggunakan metode konstruksi khusus</li>
+        <li>Nilai ≥ Rp100M / ≥ Rp10M</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════
      CTA BANNER
 ═══════════════════ -->
 <section class="cta-section">
@@ -764,6 +922,7 @@ footer {
     </a>
   </div>
 </section>
+
 
 <!-- ═══════════════════
      FOOTER
@@ -860,6 +1019,19 @@ footer {
 
     document.body.appendChild(script);
   });
+
+   const elements = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach((el) => observer.observe(el));
+
   
   /* scroll reveal */
   const io = new IntersectionObserver(entries => {

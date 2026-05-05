@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BUJKN - Badan Usaha Jasa Konstruksi Nasional | Fieldha Consulting</title>
+<title>BUJKPMA - Badan Usaha Jasa Konstruksi PMA | Fieldha Consulting</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ══════════════════════════════════
@@ -390,6 +390,71 @@ tbody td:nth-child(3) {
 .proses-note p strong { color:var(--dark); font-weight:700; }
 
 /* ══════════════════════════════════
+   PROSES / STEPS
+══════════════════════════════════ */
+.proses-section {
+  background: var(--bg);
+  padding: 72px 6%;
+}
+
+.steps-wrap {
+  max-width: 1000px; margin: 40px auto 0;
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
+  position: relative;
+}
+
+/* connector line */
+.steps-wrap::before {
+  content:'';
+  position:absolute;
+  top:36px; left:12.5%; right:12.5%;
+  height:2px;
+  background: linear-gradient(to right, var(--p) 0%, var(--p-mid) 100%);
+  z-index:0;
+}
+
+.step {
+  text-align:center; padding:0 16px;
+  position:relative; z-index:1;
+}
+
+.step-num {
+  width:72px; height:72px; margin:0 auto 16px;
+  border-radius:50%;
+  background: var(--p);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Plus Jakarta Sans', sans-serif;
+  font-size:1.5rem; font-weight:900; color:white;
+  box-shadow:0 8px 24px rgba(77,16,74,.28);
+  border:4px solid white;
+  position:relative;
+}
+
+.step-ico {
+  width:50px; height:50px; margin:0 auto 14px;
+  background:white;
+  border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 14px rgba(77,16,74,.1);
+  border:1px solid var(--border);
+}
+.step-ico svg { width:24px; height:24px; fill:none; stroke:var(--p); stroke-width:1.8; }
+
+.step h3 {
+  font-family:'Plus Jakarta Sans', sans-serif;
+  font-size:.88rem; font-weight:800; color:var(--dark); margin-bottom:8px;
+}
+.step p { font-size:.76rem; color:var(--text-s); line-height:1.65; }
+.step .step-dur {
+  display:inline-block; margin-top:8px;
+  background:var(--p-light); color:var(--p);
+  padding:3px 10px; border-radius:20px;
+  font-size:.7rem; font-weight:700;
+}
+
+
+
+/* ══════════════════════════════════
    CTA BANNER
 ══════════════════════════════════ */
 .cta-section {
@@ -563,10 +628,10 @@ footer {
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div class="hero-badge">Badan Usaha Jasa Konstruksi Nasional</div>
-      <div class="hero-title">BUJKN</div>
+      <div class="hero-badge">Badan Usaha Jasa Konstruksi PMA</div>
+      <div class="hero-title">BUJKPMA</div>
       <div class="hero-subtitle">(Foreign Construction<br>Representative Office)</div>
-      <p class="hero-desc">Izin Badan Usaha Jasa Konstruksi Nasional (BUJKN) adalah legalitas resmi bagi perusahaan jasa konstruksi nasional untuk melakukan kegiatan usaha di Indonesia melalui perwakilan resmi.</p>
+      <p class="hero-desc">Izin Badan Usaha Jasa Konstruksi PMA (BUJKPMA) adalah legalitas resmi bagi perusahaan jasa konstruksi asing untuk melakukan kegiatan usaha di Indonesia melalui perwakilan resmi.</p>
       <div class="hero-feats">
         <div class="hero-feat">
           <div class="hero-feat-ico">
@@ -606,11 +671,11 @@ footer {
 <section class="desc-section">
   <div class="desc-inner reveal">
     <div class="desc-text">
-      <p><strong>Badan Usaha Jasa Konstruksi Nasional - BUJK Nasional</strong>  adalah Perusahaan atau Badan Usaha Jasa Konstruksi yang memiliki <strong>modal 100% bersumber dari dalam negeri</strong>. Kepemilikan modal atau saham perusahaan ini dapat dimiliki oleh Pemerintah Indonesia, Pemerintah Daerah, Badan Usaha Milik Negara (BUMN), Badan Usaha Milik Daerah (BUMD), Badan Usaha Penanaman Modal Dalam Negeri (PMDN), Swasta Nasional non PMA/PMDN dan/atau Warga Negara Indonesia.</p>
-      <p>BUJK Nasional tersebut dapat berbentuk badan hukum maupun tidak berbadan hukum yang terdiri dari Perseroan Terbatas (PT), Koperasi, Perseroan Komanditer (CV) atau Firma.</p>
+      <p><strong>Badan Usaha Jasa Konstruksi PMA - BUJK PMA (PT-PMA)</strong>adalah Badan Usaha dengan Modal Asing berbentuk badan hukum Perseroan Terbatas (PT) yang melakukan kegiatan usaha konstruksi di Indonesia. Setiap Badan Usaha Jasa Konstruksi yang didirikan dengan Penanaman Modal Asing (PMA) adalah <strong>Usaha Patungan (Joint Venture) antara Badan Usaha Jasa Konstruksi Asing (BUJK Asing) dengan Badan Usaha Jasa Konstruksi Lokal (BUJK Nasional)</strong>  yang <strong>berbentuk Perseroan Terbatas (PT)</strong> sehingga biasa disebut <strong>PT PMA atau BUJK PMA</strong> </p>
+      <p>Untuk dapat melakukan kegiatan Usaha Jasa Konstruksi di Indonesia setiap <strong>BUJK PMA harus memiliki Izin Usaha Jasa Konstruksi PMA</strong> yang dikeluarkan <strong>Badan Koordinasi Penanaman Modal (BKPM) sesuai Peraturan Menteri Pekerjaan Umum dan Perumahan Rakyat Republik Indonesia Nomor 03/PRT/M/2016 tentang “Petunjuk Teknis Pemberian Izin Usaha Jaa Konstruksi Badan Usaha Jasa Konstruksi Penanaman Modal Asing”</strong></p>
     </div>
     <div class="desc-quote reveal rv-d2">
-      <p>Untuk memperoleh Izin Usaha Jasa Konstruksi setiap BUJK Nasional harus memiliki Sertifikat Badan Usaha (SBU) yang dikeluarkan oleh LPJK Nasional atau LPJK Provinsi.</p>
+      <p>Untuk memperoleh Izin Usaha Jasa Konstruksi setiap BUJK PMA harus memiliki Sertifikat Badan Usaha (SBU) yang dikeluarkan oleh LPJK Nasional.</p>
     </div>
   </div>
 </section>
@@ -622,7 +687,7 @@ footer {
   <div class="section-head reveal">
     <h2>KLASIFIKASI DAN KUALIFIKASI</h2>
     <div class="s-line"></div>
-    <p>BUJK Nasional bisa memperoleh Sertifikat Badan Usaha (SBU) dan Izin Usaha Jasa Konstruksi dengan Klasifikasi dan Kualifikasi sebagai berikut:</p>
+    <p>BUJK PMA bisa memperoleh Sertifikat Badan Usaha (SBU) dan Izin Usaha Jasa Konstruksi dengan Klasifikasi dan Kualifikasi sebagai berikut:</p>
   </div>
   <div class="table-wrap reveal rv-d1">
     <table>
@@ -638,24 +703,22 @@ footer {
         <tr>
           <td>1</td>
           <td>Jasa Pelaksana Konstruksi</td>
-          <td>K1, K2, K3, M1, M2, B1, B2</td>
-          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1.  <br>
-              Untuk perubahan/perpanjangan bisa diberikan semua kualfikasi. <br>
-              Untuk Upgrade bisa diberikan sesuai dengan Grade Sebelumnya (K1 ke K2, K2 Ke K3, K3 ke M1, M1 ke M2, M2 ke B1 dan B1 ke B2).</td>
+          <td>B1/B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi B2.
+              Untuk perubahan/perpanjangan bisa diberikan kualfikasi B1/B2</td>
         </tr>
         <tr>
           <td>2</td>
           <td>Jasa Perencana dan Pengawas Konstruksi</td>
-          <td>K1, K2, M1, M2, B</td>
-          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. <br>
-              Untuk perubahan/perpanjangan bisa diberikan semua kualfikasi. <br>
-              Untuk Upgrade bisa diberikan sesuai dengan Grade Sebelumnya (K1 ke K2, K2 ke M1, M1 ke M2 dan M2 ke B).</td>
+          <td>B</td>
+          <td>Permohonan baru, perubahan atau perpanjangan hanya bisa diberikan kualifikasi B</td>
         </tr>
         <tr>
           <td>3</td>
           <td>Jasa Konstruksi Terintegrasi</td>
-          <td>B1, B2</td>
-          <td>Permohonan baru, perubahan atau perpanjangan bisa diberikan kualifikasi B1 dan B2.</td>
+          <td>B1/B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi B2.
+              Untuk perubahan/perpanjangan bisa diberikan kualifikasi B1/B2</td>
         </tr>
       </tbody>
     </table>
@@ -667,7 +730,7 @@ footer {
 ═══════════════════ -->
 <section class="ketentuan-section">
   <div class="section-head reveal">
-    <h2>KETENTUAN DAN PERSYARATAN UTAMA BUJKN</h2>
+    <h2>KETENTUAN DAN PERSYARATAN UTAMA BUJK PMA</h2>
     <div class="s-line"></div>
   </div>
   <div class="ket-grid">
@@ -675,29 +738,32 @@ footer {
       <div class="ket-ico-wrap purple">
         <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
       </div>
-      <h3>SKA - Sertifikat Keahlian</h3>
-      <p>Tenaga ahli harus memiliki Sertifikat Keahlian (SKA) untuk dapat ditetapkan sebagai Penanggung Jawab Teknik (PJT) atau Penanggung Jawab Klasifikasi (PJK). Khusus untuk kontraktor kualifikasi kecil K1, K2 ata K3, tenaga ahli/terampil cukup memiliki Sertifikat Keterampilan (SKTK).</p>
+      <h3>IZIN PRINSIP</h3>
+      <p>BUJK PMA harus memiliki Izin Prinsip Bidang Usaha Jasa Konstruksi yang diterbitkan BKPM dengan jenis usaha yang sesuai dengan klasifikasi usaha jasa konstruksi serta memenuhi kriteria batas kepemilikan saham asing dan modal/nilai kekayaan bersih.</p>
     </div>
     <div class="ket-card reveal rv-d2">
       <div class="ket-ico-wrap gold">
         <svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       </div>
-      <h3>KTA ASOSIASI - Keanggotaan Asosiasi</h3>
-      <p>Kartu Tanda Anggota Asosiasi. Artinya BUJKN harus terdaftar sebagai anggota asosiasi perusahaan jasa konstruksi yang terdaftar atau terakreditasi LPJKN seperti AKI, GAPENSI, AKLI, GAPEKSINDO, AKAINDO untuk Kontraktor atau asosiasi PERKINDO dan INKINDO untuk Konsultan.</p>
+      <h3>KEPEMILIKAN MODAL ASING</h3>
+      <p>BUJK PMA harus memenuhi Kriteria Batas Kepemilikan Modal Asing maksimal 67% untuk Bidang Jasa Konstruksi sesuai Peraturan Presiden Republik Indonesia Nomor 44 Tahun 2016 tentang "Daftar Bidang Usaha yang Tertutup dan Bidang Usaha yang Terbuka dengan Persyaratan dibidang Penanaman Modal.</p>
     </div>
     <div class="ket-card reveal rv-d3">
       <div class="ket-ico-wrap purple">
         <svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
       </div>
-      <h3>SBU - Sertifikat Badan Usaha</h3>
-      <p>Sertifikat Badan Usaha (SBU) yaitu SBU Jasa Pelaksana Konstruksi, SBU Jasa Perencana dan Pengawas Konstruksi atau SBU Jasa Konstruksi Terintegrasi yang dikeluarkan oleh Lembaga Pengembangan Jasa Konstruksi (LPJK) melalui LPJK Nasional untuk kualifikasi besar dan melalui LPJK Propinsi untuk kualifikasi kecil dan menengah.</p>
+      <h3>NILAI KEKAYAAN BERSIH</h3>
+      <p>BUJK PMA harus memiliki modal atau nilai kekayaan bersih dengan rincian Lebih dari Rp. 50.000.000.000,- (Lima Puluh Milyar Rupiah) untuk bidang Jasa Pelaksana Konstruksi dan Bidang Jasa Konstruksi Terintegrasi dan Lebih dari Rp. 2.500.000.000,- (Dua Milyar Lima Ratus Juta Rupiah) untuk Bidang Jasa Perencana dan Pengawas Konstruksi. Nilai kekayaan bersih dibuktikan dengan melampirkan Laporan Keuangan dari Akuntan Publik.</p>
     </div>
     <div class="ket-card reveal rv-d4">
       <div class="ket-ico-wrap gold">
         <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
       </div>
-      <h3>IZIN BUJKA - Izin Usaha Jasa Konstruksi</h3>
-      <p>Izin Usaha Jasa Konstruksi Nasional atau IUJK Nasional yang dikeluarkan oleh Pemerintah Daerah Propinsi, Kabupaten/Kota sesuai Peraturan Menteri Pekerjaan Umum Nomor 04/PRT/M/2011 tentang “Pedoman Persyaratan Pemberian Izin Usaha Jasa Konstruksi Nasional”.</p>
+      <h3>PENGALAMAN KERJA</h3>
+      <p>Kontraktor & EPC (Terintegrasi):
+        Harus punya pengalaman proyek minimal Rp 83,33 M (tertinggi) atau total Rp 250 M dalam 10 tahun, dari perusahaan nasional atau joint venture. <br>
+        Konsultan (Perencana & Pengawas):
+        Harus punya pengalaman proyek minimal total Rp 2,5 M dalam 10 tahun, dari perusahaan nasional atau joint venture.</p>
     </div>
   </div>
 
@@ -715,27 +781,54 @@ footer {
 ═══════════════════ -->
 <section class="proses-section">
   <div class="section-head reveal">
-    <h2>PELAKSANAAN KEGIATAN USAHA</h2>
+    <h2>TAHAPAN PROSES PERIZINAN BUJKA</h2>
     <div class="s-line"></div>
-    <P>Badan Usaha Jasa Konstruksi Nasional atau BUJKN yang telah memiliki SBU dan IUJK berhak untuk mengikuti Tender atau pelelangan pengadaan jasa konstruksi dan mengerjakan proyek-proyek Pemerintah atau swasta meliputi;</P>
   </div>
 
   <div class="steps-wrap">
     <div class="step reveal rv-d1">
       <div class="step-num">1</div>
-      <p class="ya">Proyek yang dibiayai anggaran pendapatan belanja negara (APBN) atau anggaran pendapatan dan belanja daerah (APBD).</p>
+      <div class="step-ico">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <h3>Sertifikasi Keahlian</h3>
+      <p>Proses SKK dengan kualifikasi Ahli Madya untuk Penanggung Jawab Teknik (PJT) dan Penanggung Jawab Bidang (PJB).</p>
     </div>
     <div class="step reveal rv-d2">
       <div class="step-num">2</div>
-      <p class="ya">Proyek yang dibiayai oleh Pinjaman dan/atau hibah dari luar negeri.</p>
+      <div class="step-ico">
+        <svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+      </div>
+      <h3>Keanggotaan Asosiasi</h3>
+      <p>Proses pendaftaran menjadi anggota asosiasi perusahaan jasa konstruksi yang terdaftar atau terakreditasi LPJK Nasional.</p>
+      <span class="step-dur">Berlaku selama 1 tahun</span>
     </div>
     <div class="step reveal rv-d3">
       <div class="step-num">3</div>
-      <p class="ya">Proyek yang dibiayai oleh swasta meliputi proyek penanaman modal asing/dalam negeri atau swasta lain sesuai dengan ketentuan peraturan perundang-undangan yang berlaku.</p>
+      <div class="step-ico">
+        <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+      </div>
+      <h3>Sertifikat Badan Usaha</h3>
+      <p>Proses SBU dengan Kualifikasi besar yang dikeluarkan oleh LPJK Nasional sebagai bukti BUJKA memiliki klasifikasi dan kualifikasi usaha jasa konstruksi.</p>
+      <span class="step-dur">SBU berlaku 3 tahun</span>
+    </div>
+    <div class="step reveal rv-d4">
+      <div class="step-num">4</div>
+      <div class="step-ico">
+        <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+      </div>
+      <h3>Izin Usaha Jasa Konstruksi</h3>
+      <p>Proses IUJK sesuai klasifikasi dan kualifikasi besar setelah mendapatkan Sertifikat Badan Usaha (SBU).</p>
+      <span class="step-dur">Izin BUJKA berlaku 3 tahun</span>
     </div>
   </div>
 
-  
+  <div class="proses-note reveal">
+    <div class="proses-note-ico">
+      <svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+    </div>
+    <p>Setelah mendapatkan Izin Usaha Jasa Konstruksi sebagai Izin Badan Usaha Jasa Konstruksi Asing, maka <strong>BUJKA berhak untuk mengikuti tender/pekerjaan pengadaan Jasa Konstruksi</strong> dan mengerjakan proyek-proyek Pemerintah atau Swasta.</p>
+  </div>
 </section>
 
 <!-- ═══════════════════

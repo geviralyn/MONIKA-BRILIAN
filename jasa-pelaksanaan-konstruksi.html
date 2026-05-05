@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasa Pelaksana Konstruksi (Kontraktor) | BRILIAN Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════
+   VARIABLES
+══════════════════════════════════ */
+:root {
+  --p:        #4D104A;
+  --p-mid:    #7A2575;
+  --p-light:  #EFDEF9;
+  --p-pale:   #F7F0FB;
+  --gold:     #E8B84B;
+  --gold-pale:#FBF3DC;
+  --cream:    #FFF9EF;
+  --white:    #FFFFFF;
+  --dark:     #1A1535;
+  --text:     #2D2D3D;
+  --text-s:   #5A5A72;
+  --border:   rgba(77,16,74,0.1);
+  --bg:       #F8F5FB;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Manrope',sans-serif;
+  color:var(--text);
+  background:var(--white);
+  overflow-x:hidden;
+  padding-top:70px;
+}
+
+/* ══════════════════════════════════
+   HERO (dark full-bleed)
+══════════════════════════════════ */
+.hero{
+  min-height:420px;
+  background: linear-gradient(135deg, rgba(26,21,53,0.92) 0%, rgba(77,16,74,0.88) 100%),
+              url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&auto=format&fit=crop&q=80') center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+  padding:80px 6% 80px;
+  overflow:hidden;
+}
+/* dot pattern overlay */
+.hero::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 0);
+  background-size:28px 28px;
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1160px;margin:0 auto;width:100%;
+  display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center;
+  position:relative;z-index:1;
+}
+.hero-left{animation:fadeUp .7s ease .1s both;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--p);color:var(--p-light);
+  padding:6px 14px;border-radius:6px;
+  font-size:.7rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:20px;border:1px solid rgba(239,222,249,.2);
+}
+.hero-title{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;
+  color:white;line-height:1.1;letter-spacing:-1px;margin-bottom:18px;
+}
+.hero-desc{
+  color:rgba(239,222,249,.75);
+  font-size:.93rem;line-height:1.75;
+  max-width:480px;margin-bottom:36px;
+}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-gold{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:var(--dark);
+  padding:13px 24px;border-radius:10px;
+  font-weight:800;font-size:.88rem;text-decoration:none;
+  box-shadow:0 6px 20px rgba(232,184,75,.35);
+  transition:all .25s;
+}
+.btn-gold svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.5;}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(232,184,75,.48);}
+.btn-outline-white{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:white;
+  padding:13px 24px;border-radius:10px;
+  border:1.5px solid rgba(255,255,255,.35);
+  font-weight:700;font-size:.88rem;text-decoration:none;
+  transition:all .25s;
+}
+.btn-outline-white:hover{border-color:white;background:rgba(255,255,255,.07);}
+
+/* hero right image block */
+.hero-right{
+  position:relative;
+  animation:fadeUp .7s ease .25s both;
+}
+.hero-img-wrap{
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 24px 60px rgba(0,0,0,.5);
+}
+.hero-img-wrap img{width:100%;height:340px;object-fit:cover;display:block;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* ══════════════════════════════════
+   INTRO SECTION
+══════════════════════════════════ */
+.intro-section{
+  background:var(--white);
+  padding:72px 6%;
+}
+.intro-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:360px 1fr;gap:64px;align-items:center;
+}
+.intro-img{
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 16px 48px rgba(77,16,74,.15);
+}
+.intro-img img{width:100%;height:340px;object-fit:cover;display:block;}
+
+.intro-label{
+  display:inline-block;
+  font-size:.7rem;font-weight:800;letter-spacing:2px;text-transform:uppercase;
+  color:var(--p);margin-bottom:12px;
+}
+.intro-title{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:900;
+  color:var(--dark);line-height:1.3;margin-bottom:16px;
+}
+.intro-text p{color:var(--text-s);font-size:.88rem;line-height:1.8;margin-bottom:14px;}
+.intro-feats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px;
+}
+.intro-feat{
+  text-align:center;
+  background:var(--p-pale);border:1px solid var(--border);
+  border-radius:12px;padding:16px 12px;
+}
+.intro-feat-ico{
+  width:40px;height:40px;margin:0 auto 10px;
+  background:var(--p-light);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+}
+.intro-feat-ico svg{width:20px;height:20px;fill:none;stroke:var(--p);stroke-width:1.8;}
+.intro-feat strong{display:block;font-size:.8rem;font-weight:800;color:var(--dark);margin-bottom:3px;}
+.intro-feat span{font-size:.72rem;color:var(--text-s);}
+
+/* ══════════════════════════════════
+   SECTION HEADER COMMON
+══════════════════════════════════ */
+.sec-head{text-align:center;margin-bottom:40px;}
+.sec-head h2{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(1.3rem,2.5vw,1.75rem);font-weight:900;
+  color:var(--dark);letter-spacing:-.3px;margin-bottom:10px;
+}
+.sec-line{
+  width:44px;height:3px;
+  background:linear-gradient(to right,var(--p),var(--p-mid));
+  border-radius:2px;margin:0 auto 12px;
+}
+.sec-head p{color:var(--text-s);font-size:.86rem;line-height:1.7;max-width:500px;margin:0 auto;}
+
+/* ══════════════════════════════════
+   KUALIFIKASI CARDS
+══════════════════════════════════ */
+.kual-section{background:var(--bg);padding:72px 6%;}
+.kual-grid{
+  max-width:1060px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+.kual-card{
+  background:white;border-radius:16px;
+  border:1px solid var(--border);
+  padding:28px 24px;
+  transition:all .3s;
+}
+.kual-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(77,16,74,.12);border-color:var(--p);}
+.kual-card-head{
+  display:flex;align-items:center;gap:14px;margin-bottom:18px;
+}
+.kual-ico{
+  width:52px;height:52px;flex-shrink:0;
+  background:var(--p-light);border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+}
+.kual-ico svg{width:26px;height:26px;fill:none;stroke:var(--p);stroke-width:1.7;}
+.kual-ico.gold{background:var(--gold-pale);}
+.kual-ico.gold svg{stroke:var(--gold);}
+.kual-card-head div h3{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.9rem;font-weight:900;color:var(--dark);
+}
+.kual-card-head div span{
+  font-size:.75rem;color:var(--text-s);
+}
+.kual-checks{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.kual-checks li{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:.82rem;color:var(--text-s);line-height:1.4;
+}
+.kual-checks li::before{
+  content:'';
+  width:18px;height:18px;flex-shrink:0;
+  background:var(--p-light);border-radius:5px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234D104A' stroke-width='2.5'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:center;background-size:12px;
+}
+.kual-card.gold-card .kual-checks li::before{background-color:var(--gold-pale);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E8B84B' stroke-width='2.5'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");}
+
+/* ══════════════════════════════════
+   TINGKAT / STEPPER
+══════════════════════════════════ */
+.tingkat-section{background:var(--white);padding:72px 6%;}
+
+.stepper-wrap{
+  max-width:860px;margin:0 auto 48px;
+  display:flex;align-items:center;justify-content:center;
+  gap:0;position:relative;
+}
+.stepper-wrap::before{
+  content:'';
+  position:absolute;
+  top:50%;left:0;right:0;
+  height:2px;
+  background:var(--border);
+  transform:translateY(-50%);
+  z-index:0;
+}
+.step-node{
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+  position:relative;z-index:1;flex:1;
+  cursor:pointer;
+}
+.step-node-circle{
+  width:52px;height:52px;
+  border-radius:50%;
+  background:white;
+  border:2px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:900;font-size:.85rem;
+  color:var(--text-s);
+  transition:all .3s;
+  box-shadow:0 2px 8px rgba(0,0,0,.06);
+}
+.step-node.active .step-node-circle,
+.step-node:hover .step-node-circle{
+  background:var(--p);color:white;border-color:var(--p);
+  box-shadow:0 6px 20px rgba(77,16,74,.28);
+  transform:scale(1.08);
+}
+.step-node.gold-node.active .step-node-circle,
+.step-node.gold-node:hover .step-node-circle{
+  background:var(--gold);color:var(--dark);border-color:var(--gold);
+  box-shadow:0 6px 20px rgba(232,184,75,.35);
+}
+.step-node-label{font-size:.72rem;color:var(--text-s);font-weight:600;}
+.step-node.active .step-node-label{color:var(--p);font-weight:700;}
+
+/* detail accordion */
+.detail-head{
+  text-align:center;margin-bottom:24px;
+}
+.detail-head h3{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:1rem;font-weight:900;color:var(--dark);
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;
+}
+.detail-line{width:36px;height:2.5px;background:var(--p);border-radius:2px;margin:0 auto;}
+
+.acc-wrap{
+  max-width:1060px;margin:0 auto;
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+}
+
+.acc-item{
+  border:1.5px solid var(--border);
+  border-radius:12px;overflow:hidden;
+  transition:border-color .25s;
+}
+.acc-item.open{border-color:var(--p);}
+
+.acc-trigger{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:15px 20px;background:white;cursor:pointer;
+  font-weight:700;font-size:.88rem;color:var(--dark);
+  transition:background .2s;
+  user-select:none;border:none;width:100%;text-align:left;
+  font-family:'Manrope',sans-serif;
+}
+.acc-item.open .acc-trigger{background:var(--p);color:white;}
+.acc-trigger-icon{
+  width:24px;height:24px;flex-shrink:0;
+  border-radius:6px;background:var(--p-light);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:700;color:var(--p);
+  transition:all .25s;
+}
+.acc-item.open .acc-trigger-icon{
+  background:rgba(255,255,255,.2);color:white;transform:rotate(45deg);
+}
+
+.acc-body{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.acc-item.open .acc-body{max-height:300px;}
+.acc-body-inner{
+  padding:18px 20px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+}
+.acc-detail-item{
+  display:flex;align-items:flex-start;gap:10px;
+}
+.acc-detail-ico{
+  width:32px;height:32px;flex-shrink:0;
+  background:var(--p-pale);border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.acc-detail-ico svg{width:15px;height:15px;fill:none;stroke:var(--p);stroke-width:1.8;}
+.acc-detail-item strong{display:block;font-size:.76rem;font-weight:800;color:var(--dark);margin-bottom:2px;}
+.acc-detail-item span{font-size:.72rem;color:var(--text-s);line-height:1.5;}
+
+/* ══════════════════════════════════
+   TABLE SECTION
+══════════════════════════════════ */
+.table-section{background:var(--bg);padding:72px 6%;}
+.table-wrap{
+  max-width:1060px;margin:0 auto;
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 4px 28px rgba(77,16,74,.1);
+}
+table{width:100%;border-collapse:collapse;background:white;}
+thead tr{background:var(--p);}
+thead th{
+  padding:16px 20px;text-align:left;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.75rem;font-weight:800;
+  color:white;letter-spacing:.8px;text-transform:uppercase;
+}
+tbody tr{border-bottom:1px solid rgba(77,16,74,.06);}
+tbody tr:last-child{border-bottom:none;}
+tbody tr:nth-child(even){background:var(--p-pale);}
+tbody tr:hover{background:var(--p-light);}
+tbody td{padding:14px 20px;font-size:.84rem;color:var(--text);vertical-align:top;}
+tbody td:first-child{font-weight:700;color:var(--text-s);width:50px;}
+tbody td:nth-child(3){
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:700;color:var(--p);font-size:.84rem;
+}
+
+/* ══════════════════════════════════
+   CTA BANNER
+══════════════════════════════════ */
+.cta-section{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,var(--p) 0%,var(--p-mid) 100%);
+  padding:64px 6%;
+}
+.cta-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle at 2px 2px,rgba(255,255,255,.05) 1px,transparent 0);
+  background-size:26px 26px;pointer-events:none;
+}
+/* dark photo overlay behind gradient */
+.cta-section::after{
+  content:'';position:absolute;inset:0;z-index:0;
+  background:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1400&auto=format&fit=crop&q=80') center/cover no-repeat;
+  opacity:.08;pointer-events:none;
+}
+.cta-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;
+  position:relative;z-index:1;
+}
+.cta-text h2{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:clamp(1.3rem,2.5vw,1.8rem);font-weight:900;color:white;margin-bottom:10px;
+}
+.cta-text p{color:rgba(239,222,249,.7);font-size:.87rem;line-height:1.65;}
+.cta-perks{
+  display:flex;gap:32px;margin-top:28px;flex-wrap:wrap;
+}
+.cta-perk{
+  display:flex;align-items:center;gap:9px;
+  color:rgba(239,222,249,.8);font-size:.8rem;font-weight:600;
+}
+.cta-perk svg{width:16px;height:16px;fill:none;stroke:var(--gold);stroke-width:2;}
+
+.cta-right-wrap{flex-shrink:0;}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--gold);color:var(--dark);
+  padding:15px 28px;border-radius:11px;
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;font-size:.9rem;
+  text-decoration:none;white-space:nowrap;
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
+  transition:all .25s;
+}
+.cta-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.35);}
+
+/* ══════════════════════════════════
+   FOOTER
+══════════════════════════════════ */
+footer{background:var(--dark);padding:56px 6% 28px;}
+.footer-inner{
+  max-width:1160px;margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;
+  padding-bottom:36px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.ft-logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:18px;}
+.ft-logo-ico{
+  width:36px;height:36px;
+  background:linear-gradient(135deg,var(--p),var(--p-mid));
+  border-radius:9px;display:flex;align-items:center;justify-content:center;
+}
+.ft-logo-ico svg{width:18px;height:18px;fill:white;}
+.ft-logo-name{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-weight:800;font-size:1rem;color:white;
+}
+.ft-contact{display:flex;flex-direction:column;gap:10px;}
+.ft-ci{display:flex;align-items:flex-start;gap:10px;}
+.ft-ci svg{width:15px;height:15px;fill:none;stroke:var(--p-light);stroke-width:1.8;flex-shrink:0;margin-top:2px;}
+.ft-ci span{color:rgba(255,255,255,.5);font-size:.79rem;line-height:1.6;}
+.ft-col h4{
+  font-family:'Plus Jakarta Sans',sans-serif;
+  font-size:.75rem;font-weight:800;color:var(--p-light);
+  text-transform:uppercase;letter-spacing:1px;margin-bottom:14px;
+}
+.ft-links{display:flex;flex-direction:column;gap:2px;}
+.ft-links a{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:7px 0;color:rgba(255,255,255,.48);
+  text-decoration:none;font-size:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.04);
+  transition:color .18s;
+}
+.ft-links a:last-child{border-bottom:none;}
+.ft-links a:hover{color:var(--p-light);}
+.ft-links a svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2.5;opacity:.35;}
+.ft-social{display:flex;gap:10px;margin-top:16px;}
+.ft-social a{
+  width:38px;height:38px;border-radius:9px;
+  background:rgba(255,255,255,.07);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;transition:background .2s;
+}
+.ft-social a:hover{background:var(--p);}
+.ft-social a svg{width:16px;height:16px;fill:rgba(255,255,255,.6);}
+.footer-bottom{
+  max-width:1160px;margin:22px auto 0;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.footer-bottom p,.footer-bottom span{color:rgba(255,255,255,.3);font-size:.74rem;}
+.footer-bottom span{font-style:italic;}
+
+/* ══════════════════════════════════
+   SCROLL REVEAL
+══════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.22,1,.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rv-d1{transition-delay:.1s;}
+.rv-d2{transition-delay:.2s;}
+.rv-d3{transition-delay:.3s;}
+.rv-d4{transition-delay:.4s;}
+
+/* ══════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════ */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr 340px;gap:40px;}
+  .intro-inner{grid-template-columns:280px 1fr;gap:40px;}
+  .kual-grid{grid-template-columns:1fr 1fr;gap:18px;}
+  .acc-wrap{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  body{padding-top:62px;}
+  .hero-inner,.intro-inner{grid-template-columns:1fr;}
+  .hero-right,.intro-img{display:none;}
+  .kual-grid{grid-template-columns:1fr;}
+  .intro-feats{grid-template-columns:1fr 1fr;}
+  .cta-inner{grid-template-columns:1fr;text-align:center;}
+  .cta-perks{justify-content:center;}
+  .cta-right-wrap{text-align:center;}
+  .footer-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .stepper-wrap{overflow-x:auto;padding-bottom:8px;}
+  .acc-body-inner{grid-template-columns:1fr;}
+  thead th:last-child,tbody td:last-child{display:none;}
+}
+@media(max-width:540px){
+  .intro-feats{grid-template-columns:1fr;}
+  .hero-btns{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge">Layanan Kami</div>
+      <h1 class="hero-title">Jasa Pelaksana<br>Konstruksi<br>(Kontraktor)</h1>
+      <p class="hero-desc">Layanan legalitas dan sertifikasi untuk badan usaha konstruksi agar dapat mengikuti proyek di seluruh Indonesia secara resmi.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-gold">
+          Konsultasi Sekarang
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#kualifikasi" class="btn-outline-white">Pelajari Persyaratan</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-wrap">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80" alt="Konstruksi">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     INTRO
+══════════════════════════════════ -->
+<section class="intro-section">
+  <div class="intro-inner reveal">
+    <div class="intro-img">
+      <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&auto=format&fit=crop&q=80" alt="Gedung Konstruksi">
+    </div>
+    <div class="intro-text">
+      <span class="intro-label">Jasa Pelaksana Konstruksi</span>
+      <h2 class="intro-title">Membangun Proyek, Mewujudkan Solusi Konstruksi yang Terpercaya</h2>
+      <p>Jasa Pelaksana Konstruksi (Kontraktor) adalah badan usaha yang memiliki kompetensi untuk melaksanakan pekerjaan konstruksi sesuai dengan kontrak kerja.</p>
+      <p>Kami membantu perusahaan Anda untuk mendapatkan sertifikasi dan izin resmi agar dapat mengikuti proyek pemerintah maupun swasta di seluruh Indonesia.</p>
+      <div class="intro-feats">
+        <div class="intro-feat">
+          <div class="intro-feat-ico">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <strong>Legal &amp; Resmi</strong>
+          <span>Sesuai peraturan pemerintah</span>
+        </div>
+        <div class="intro-feat">
+          <div class="intro-feat-ico">
+            <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <strong>Untuk Proyek</strong>
+          <span>Skala Kecil hingga Besar</span>
+        </div>
+        <div class="intro-feat">
+          <div class="intro-feat-ico">
+            <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <strong>Sertifikasi Wajib</strong>
+          <span>Untuk mengikuti tender proyek</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     KUALIFIKASI CARDS
+══════════════════════════════════ -->
+<section class="kual-section" id="kualifikasi">
+  <div class="sec-head reveal">
+    <h2>KUALIFIKASI KONSTRUKSI</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="kual-grid">
+    <div class="kual-card reveal rv-d1">
+      <div class="kual-card-head">
+        <div class="kual-ico">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+        </div>
+        <div>
+          <h3>KUALIFIKASI KECIL</h3>
+          <span>(K1 – K3)</span>
+        </div>
+      </div>
+      <ul class="kual-checks">
+        <li>Tenaga kerja minimal relatif kecil</li>
+        <li>Modal relatif kecil</li>
+        <li>Pengalaman kerja tidak wajib</li>
+      </ul>
+    </div>
+    <div class="kual-card gold-card reveal rv-d2">
+      <div class="kual-card-head">
+        <div class="kual-ico gold">
+          <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        </div>
+        <div>
+          <h3>KUALIFIKASI MENENGAH</h3>
+          <span>(M1 – M2)</span>
+        </div>
+      </div>
+      <ul class="kual-checks">
+        <li>Tenaga kerja lebih banyak</li>
+        <li>Modal lebih besar</li>
+        <li>Pengalaman kerja mulai diwajibkan</li>
+      </ul>
+    </div>
+    <div class="kual-card reveal rv-d3">
+      <div class="kual-card-head">
+        <div class="kual-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <h3>KUALIFIKASI BESAR</h3>
+          <span>(B1 – B2)</span>
+        </div>
+      </div>
+      <ul class="kual-checks">
+        <li>Tenaga kerja besar &amp; profesional</li>
+        <li>Modal sangat besar</li>
+        <li>Pengalaman kerja wajib dan signifikan</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     TINGKAT + DETAIL ACCORDION
+══════════════════════════════════ -->
+<section class="tingkat-section">
+  <div class="sec-head reveal">
+    <h2>TINGKAT KUALIFIKASI JASA PELAKSANA KONSTRUKSI</h2>
+    <div class="sec-line"></div>
+    <p>Pilih tingkat kualifikasi untuk melihat detail persyaratan</p>
+  </div>
+
+  <!-- Stepper -->
+  <div class="stepper-wrap reveal">
+    <div class="step-node active" data-target="acc-k1">
+      <div class="step-node-circle">K1</div>
+      <span class="step-node-label">Kecil</span>
+    </div>
+    <div class="step-node" data-target="acc-k2">
+      <div class="step-node-circle">K2</div>
+      <span class="step-node-label">Kecil</span>
+    </div>
+    <div class="step-node" data-target="acc-k3">
+      <div class="step-node-circle">K3</div>
+      <span class="step-node-label">Kecil</span>
+    </div>
+    <div class="step-node gold-node" data-target="acc-m1">
+      <div class="step-node-circle">M1</div>
+      <span class="step-node-label">Menengah</span>
+    </div>
+    <div class="step-node gold-node" data-target="acc-m2">
+      <div class="step-node-circle">M2</div>
+      <span class="step-node-label">Menengah</span>
+    </div>
+    <div class="step-node" data-target="acc-b1">
+      <div class="step-node-circle">B1</div>
+      <span class="step-node-label">Besar</span>
+    </div>
+    <div class="step-node" data-target="acc-b2">
+      <div class="step-node-circle">B2</div>
+      <span class="step-node-label">Besar</span>
+    </div>
+  </div>
+
+  <!-- Detail head -->
+  <div class="detail-head reveal">
+    <h3>Detail Persyaratan Kualifikasi</h3>
+    <div class="detail-line"></div>
+  </div>
+
+  <!-- Accordion grid -->
+  <div class="acc-wrap">
+    <!-- LEFT COL -->
+    <div>
+      <div class="acc-item open" id="acc-k1">
+        <button class="acc-trigger" type="button">
+          Kualifikasi K1
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 1 orang tenaga kerja tetap</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal sesuai ketentuan (lihat tabel bidang usaha)</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Pengalaman kerja tidak diwajibkan</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-k2">
+        <button class="acc-trigger" type="button">
+          Kualifikasi K2
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 1 orang tenaga kerja tetap bersertifikat</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 500 juta</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Tidak diwajibkan</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-k3">
+        <button class="acc-trigger" type="button">
+          Kualifikasi K3
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 2 orang tenaga kerja bersertifikat</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 2 miliar</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Tidak diwajibkan</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT COL -->
+    <div>
+      <div class="acc-item" id="acc-m1">
+        <button class="acc-trigger" type="button">
+          Kualifikasi M1
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 3 tenaga tetap bersertifikat</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 10 miliar</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Wajib, pengalaman paling sedikit 5 tahun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-m2">
+        <button class="acc-trigger" type="button">
+          Kualifikasi M2
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 4 tenaga tetap bersertifikat ahli</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 50 miliar</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Wajib, pengalaman paling sedikit 7 tahun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-b1">
+        <button class="acc-trigger" type="button">
+          Kualifikasi B1
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 6 tenaga ahli bersertifikat</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 250 miliar</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Wajib signifikan, minimal 10 tahun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item" id="acc-b2">
+        <button class="acc-trigger" type="button">
+          Kualifikasi B2
+          <span class="acc-trigger-icon">+</span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div><strong>Tenaga Kerja</strong><span>Minimal 8 tenaga ahli madya/utama</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+              <div><strong>Modal / Kekayaan Bersih</strong><span>Minimal Rp 500 miliar</span></div>
+            </div>
+            <div class="acc-detail-item">
+              <div class="acc-detail-ico"><svg viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div><strong>Pengalaman Kerja</strong><span>Wajib, skala nasional minimal 10 tahun</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /acc-wrap -->
+</section>
+
+<!-- ══════════════════════════════════
+     TABLE
+══════════════════════════════════ -->
+<section class="table-section">
+  <div class="sec-head reveal">
+    <h2>KLASIFIKASI BIDANG USAHA JASA PELAKSANA KONSTRUKSI</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="table-wrap reveal rv-d1">
+    <table>
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Klasifikasi Bidang Usaha</th>
+          <th>Kualifikasi</th>
+          <th>Keterangan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Bangunan Gedung</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. Untuk perubahan/perpanjangan bisa diberikan semua kualifikasi.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pekerjaan Sipil</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. Untuk perubahan/perpanjangan bisa diberikan semua kualifikasi.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Pekerjaan Mekanikal</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. Untuk perubahan/perpanjangan bisa diberikan semua kualifikasi.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Pekerjaan Elektrikal</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. Untuk perubahan/perpanjangan bisa diberikan semua kualifikasi.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Pekerjaan Tata Lingkungan</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Permohonan baru hanya bisa diberikan kualifikasi K1 dan M1. Untuk perubahan/perpanjangan bisa diberikan semua kualifikasi.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Pekerjaan Spesialis</td>
+          <td>K1, K2, K3, M1, M2, B1, B2</td>
+          <td>Tidak bisa diberikan bersamaan dengan bidang lainnya dan bidang usaha sesuai dengan bidang usaha dalam Akta Perusahaan.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     CTA
+══════════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2>Siap Mengurus Sertifikasi Kontraktor Anda?</h2>
+      <p>Tim profesional kami siap membantu Anda mendapatkan sertifikasi dengan proses cepat, aman, dan sesuai regulasi.</p>
+      <div class="cta-perks">
+        <div class="cta-perk">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Proses Cepat
+        </div>
+        <div class="cta-perk">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          Pendampingan Hingga Selesai
+        </div>
+        <div class="cta-perk">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          Aman &amp; Terpercaya
+        </div>
+      </div>
+    </div>
+    <div class="cta-right-wrap">
+      <a href="#" class="cta-btn">
+        Mulai Konsultasi
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="ft-logo">
+        <div class="ft-logo-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <span class="ft-logo-name">BRILIAN</span>
+      </a>
+      <div class="ft-contact">
+        <div class="ft-ci">
+          <svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          <span>PT. Monitatama Brilian (Brilian Consulting)<br>Jl. H. Dahlan Komplek Citra Loka No. 10<br>Duren Sawit, Jakarta 13440</span>
+        </div>
+        <div class="ft-ci">
+          <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>021-1234-5678 | 0813 8425 0004 (Monica)</span>
+        </div>
+        <div class="ft-ci">
+          <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>brilanconsulting@gmail.com</span>
+        </div>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Layanan Kami</h4>
+      <div class="ft-links">
+        <a href="#">Badan Usaha Jasa Konstruksi <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">Pelaksana Konstruksi <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">Perencana dan Pengawas <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">Konstruksi Terintegrasi <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">SKUP MIGAS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">ISO/OHSAS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="iujp.html">IUJP <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">KADIN <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Ikuti Kami</h4>
+      <div class="ft-social">
+        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 BRILIAN Consulting. All Rights Reserved.</p>
+    <span>Solusi Sertifikasi &amp; Legalitas untuk Bisnis yang Lebih Kuat</span>
+  </div>
+</footer>
+
+<script>
+fetch('navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    // load JS setelah HTML masuk
+    const script = document.createElement('script');
+    script.src = 'navbar.js';
+
+    script.onload = () => {
+      initNavbar(); // jalanin setelah JS ready
+    };
+
+    document.body.appendChild(script);
+  });
+  
+/* ── scroll reveal ── */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── accordion ── */
+document.querySelectorAll('.acc-trigger').forEach(btn => {
+  btn.addEventListener('click', function(){
+    const item = this.closest('.acc-item');
+    const isOpen = item.classList.contains('open');
+    // don't close all — allow multiple open; toggle this one
+    item.classList.toggle('open', !isOpen);
+  });
+});
+
+/* ── stepper ── */
+document.querySelectorAll('.step-node').forEach(node => {
+  node.addEventListener('click', function(){
+    document.querySelectorAll('.step-node').forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
+    const target = this.dataset.target;
+    const accItem = document.getElementById(target);
+    if(accItem){
+      accItem.classList.add('open');
+      accItem.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+});
+
+/* ── inject navbar ── */
+(function(){
+  var wrapper = document.getElementById('navbar');
+  fetch('navbar.html')
+    .then(r => r.text())
+    .then(html => {
+      var doc = new DOMParser().parseFromString(html,'text/html');
+      doc.querySelectorAll('style').forEach(s => document.head.appendChild(s.cloneNode(true)));
+      var nav = doc.getElementById('bn-root');
+      if(nav) wrapper.appendChild(nav);
+      doc.querySelectorAll('script').forEach(s => {
+        var ns = document.createElement('script');
+        ns.textContent = s.textContent;
+        document.body.appendChild(ns);
+      });
+    });
+})();
+</script>
+
+</body>
+</html>

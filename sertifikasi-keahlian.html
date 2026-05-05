@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sertifikat Keahlian (SKA) | BRILIAN Consulting</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════
+   DESIGN DIRECTION: Editorial / Refined
+   — Generous white space, strong typographic hierarchy
+   — Fraunces (editorial serif display) × DM Sans (clean body)
+   — Deep plum + warm lavender + clean white
+   — Asymmetric layouts, number-led sections, left-rail accents
+═══════════════════════════════════ */
+:root {
+  --ink:      #1A1025;   /* near-black with purple tint */
+  --plum:     #4D104A;   /* primary dark */
+  --plum-mid: #7A2575;
+  --lilac:    #EFDEF9;   /* light fill */
+  --lilac-2:  #F7F0FB;
+  --gold:     #D4A847;
+  --gold-lt:  #F5E4A8;
+  --stone:    #F4F1F8;   /* off-white bg */
+  --mist:     #EAE4F0;   /* divider */
+  --white:    #FFFFFF;
+  --body:     #3D3550;   /* body text */
+  --caption:  #7A6E8A;   /* muted */
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--body);
+  background:var(--white);
+  overflow-x:hidden;
+  padding-top:70px;
+}
+
+/* ═══════════════════════════════════
+   HERO — split screen editorial
+═══════════════════════════════════ */
+.hero{
+  min-height:88vh;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  position:relative;
+  overflow:hidden;
+}
+
+/* left panel */
+.hero-panel-l{
+  background:var(--plum);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:80px 64px 72px;
+  position:relative;
+  z-index:1;
+}
+
+/* fine dot texture on left */
+.hero-panel-l::before{
+  content:'';
+  position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.05) 1px,transparent 0);
+  background-size:22px 22px;
+  pointer-events:none;
+}
+
+/* large vertical label */
+.hero-vert-label{
+  position:absolute;
+  top:50%; right:-14px;
+  transform:translateY(-50%) rotate(90deg);
+  transform-origin:center;
+  font-size:.62rem;font-weight:700;letter-spacing:4px;text-transform:uppercase;
+  color:rgba(239,222,249,.3);
+  white-space:nowrap;
+  z-index:2;
+}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(239,222,249,.12);
+  border:1px solid rgba(239,222,249,.2);
+  color:var(--lilac);
+  padding:6px 14px;border-radius:4px;
+  font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:28px;width:fit-content;
+}
+.hero-tag::before{
+  content:'';width:6px;height:6px;
+  background:var(--gold);border-radius:50%;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.5);}}
+
+.hero-num{
+  font-family:'Fraunces',serif;
+  font-size:7rem;font-weight:900;
+  color:rgba(239,222,249,.06);
+  line-height:1;
+  position:absolute;top:40px;left:48px;
+  pointer-events:none;
+  user-select:none;
+}
+
+.hero-eyebrow{
+  font-size:.72rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+
+.hero-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(2.4rem,4vw,3.6rem);
+  font-weight:900;
+  color:white;
+  line-height:1.08;
+  letter-spacing:-.5px;
+  margin-bottom:28px;
+}
+
+.hero-title em{
+  font-style:italic;
+  color:var(--lilac);
+}
+
+.hero-desc{
+  color:rgba(239,222,249,.68);
+  font-size:.93rem;
+  line-height:1.8;
+  max-width:400px;
+  margin-bottom:48px;
+}
+
+.hero-stats{
+  display:flex;gap:40px;
+  border-top:1px solid rgba(239,222,249,.12);
+  padding-top:28px;
+}
+.hero-stat-num{
+  font-family:'Fraunces',serif;
+  font-size:2rem;font-weight:700;
+  color:var(--gold);display:block;
+}
+.hero-stat-lbl{
+  font-size:.72rem;color:rgba(239,222,249,.5);font-weight:500;
+}
+
+/* right panel — photo */
+.hero-panel-r{
+  position:relative;overflow:hidden;
+}
+.hero-panel-r img{
+  width:100%;height:100%;object-fit:cover;
+  filter:brightness(.85) saturate(.9);
+  transition:transform 8s ease;
+}
+.hero-panel-r:hover img{transform:scale(1.04);}
+
+/* overlay gradient */
+.hero-panel-r::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to right, var(--plum) 0%, transparent 30%);
+}
+
+/* floating badge */
+.hero-float-badge{
+  position:absolute;bottom:40px;right:40px;z-index:2;
+  background:white;border-radius:14px;
+  padding:18px 22px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+  display:flex;align-items:center;gap:14px;
+  animation:badgeIn .8s cubic-bezier(.22,1,.36,1) .6s both;
+}
+@keyframes badgeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.hero-float-ico{
+  width:44px;height:44px;
+  background:var(--plum);border-radius:11px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.hero-float-ico svg{width:22px;height:22px;fill:none;stroke:white;stroke-width:1.8;}
+.hero-float-text strong{display:block;font-size:.85rem;font-weight:700;color:var(--ink);}
+.hero-float-text span{font-size:.72rem;color:var(--caption);}
+
+/* hero btns */
+.hero-btns{
+  display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--gold);color:var(--ink);
+  padding:13px 24px;border-radius:9px;
+  font-weight:700;font-size:.88rem;text-decoration:none;
+  box-shadow:0 6px 20px rgba(212,168,71,.4);
+  transition:all .25s;
+}
+.btn-primary svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2.5;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(212,168,71,.55);}
+
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:9px;
+  background:transparent;color:rgba(239,222,249,.8);
+  padding:13px 24px;border-radius:9px;
+  border:1.5px solid rgba(239,222,249,.25);
+  font-weight:600;font-size:.88rem;text-decoration:none;
+  transition:all .25s;
+}
+.btn-ghost:hover{border-color:rgba(239,222,249,.6);color:white;}
+
+/* ═══════════════════════════════════
+   WHAT IS SKA — left-rail layout
+═══════════════════════════════════ */
+.what-section{
+  background:var(--white);
+  padding:100px 0;
+}
+.what-inner{
+  max-width:1200px;margin:0 auto;padding:0 6%;
+  display:grid;grid-template-columns:260px 1fr;gap:80px;align-items:start;
+}
+
+/* sticky left rail */
+.what-rail{
+  position:sticky;top:100px;
+}
+.rail-label{
+  font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--plum);margin-bottom:16px;
+  display:flex;align-items:center;gap:8px;
+}
+.rail-label::before{content:'';width:20px;height:2px;background:var(--plum);}
+.rail-title{
+  font-family:'Fraunces',serif;
+  font-size:2rem;font-weight:700;
+  color:var(--ink);line-height:1.3;
+  margin-bottom:20px;
+}
+.rail-divider{width:40px;height:3px;background:var(--gold);border-radius:2px;margin-bottom:20px;}
+.rail-img{
+  border-radius:14px;overflow:hidden;
+  box-shadow:0 16px 48px rgba(77,16,74,.14);
+  margin-top:28px;
+}
+.rail-img img{width:100%;height:200px;object-fit:cover;display:block;}
+
+/* main content */
+.what-content{}
+.what-lead{
+  font-family:'Fraunces',serif;
+  font-size:1.25rem;font-weight:600;font-style:italic;
+  color:var(--plum);line-height:1.6;
+  border-left:3px solid var(--gold);
+  padding-left:20px;
+  margin-bottom:28px;
+}
+.what-body p{
+  font-size:.92rem;line-height:1.85;color:var(--body);
+  margin-bottom:16px;
+}
+.what-body p strong{color:var(--plum);font-weight:700;}
+
+/* note card */
+.note-card{
+  background:var(--stone);
+  border-left:4px solid var(--plum);
+  border-radius:0 12px 12px 0;
+  padding:20px 24px;
+  margin:24px 0;
+}
+.note-card p{font-size:.85rem;color:var(--body);line-height:1.7;margin:0;}
+.note-card p + p{margin-top:10px;}
+.note-card em{font-style:italic;color:var(--plum-mid);}
+
+/* ═══════════════════════════════════
+   QUALIFICATION TYPES — numbered cards
+═══════════════════════════════════ */
+.qual-section{
+  background:var(--stone);
+  padding:100px 0;
+}
+.qual-inner{
+  max-width:1200px;margin:0 auto;padding:0 6%;
+}
+.section-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:56px;gap:24px;
+}
+.sh-left{}
+.sh-eyebrow{
+  font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--plum);margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+.sh-eyebrow::before{content:'';width:20px;height:2px;background:var(--plum);}
+.sh-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,2.5vw,2.2rem);font-weight:700;
+  color:var(--ink);line-height:1.2;
+}
+.sh-right p{font-size:.84rem;color:var(--caption);line-height:1.7;max-width:300px;text-align:right;}
+
+.qual-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2px;
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 4px 40px rgba(77,16,74,.08);
+}
+
+.qual-card{
+  background:white;
+  padding:48px 36px;
+  position:relative;
+  transition:all .3s ease;
+  border-bottom:4px solid transparent;
+}
+.qual-card:hover{
+  background:var(--lilac-2);
+  border-bottom-color:var(--plum);
+  transform:translateY(-4px);
+  box-shadow:0 20px 50px rgba(77,16,74,.12);
+  z-index:1;
+}
+
+.qual-card-num{
+  font-family:'Fraunces',serif;
+  font-size:5rem;font-weight:900;
+  color:var(--mist);
+  line-height:1;
+  margin-bottom:-8px;
+  transition:color .3s;
+  user-select:none;
+}
+.qual-card:hover .qual-card-num{color:var(--lilac);}
+
+.qual-card-badge{
+  display:inline-flex;align-items:center;
+  background:var(--lilac);color:var(--plum);
+  padding:4px 12px;border-radius:20px;
+  font-size:.68rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  margin-bottom:16px;
+}
+
+.qual-card h3{
+  font-family:'Fraunces',serif;
+  font-size:1.3rem;font-weight:700;
+  color:var(--ink);margin-bottom:8px;
+  line-height:1.3;
+}
+.qual-card .qual-range{
+  font-size:.75rem;font-weight:700;
+  color:var(--plum-mid);
+  background:var(--lilac-2);
+  padding:3px 10px;border-radius:4px;
+  display:inline-block;margin-bottom:20px;
+}
+.qual-card .qual-range.gold{background:var(--gold-lt);color:#8A6A00;}
+
+.qual-reqs{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.qual-reqs li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:.84rem;color:var(--body);line-height:1.5;
+}
+.qual-reqs li .req-ico{
+  width:20px;height:20px;flex-shrink:0;margin-top:1px;
+  background:var(--lilac);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.qual-reqs li .req-ico svg{width:11px;height:11px;fill:none;stroke:var(--plum);stroke-width:2.5;}
+.qual-card:hover .qual-reqs li .req-ico{background:var(--plum);} 
+.qual-card:hover .qual-reqs li .req-ico svg{stroke:white;}
+
+/* ═══════════════════════════════════
+   CLASSIFICATION TABLE — editorial style
+═══════════════════════════════════ */
+.class-section{
+  background:var(--white);
+  padding:100px 0;
+}
+.class-inner{max-width:1200px;margin:0 auto;padding:0 6%;}
+
+.table-editorial{
+  width:100%;border-collapse:collapse;
+  margin-top:48px;
+}
+.table-editorial thead tr{
+  border-bottom:2px solid var(--plum);
+}
+.table-editorial thead th{
+  padding:14px 20px;
+  text-align:left;
+  font-size:.7rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--plum);
+  background:transparent;
+}
+.table-editorial thead th:first-child{width:60px;}
+
+.table-editorial tbody tr{
+  border-bottom:1px solid var(--mist);
+  transition:background .18s;
+}
+.table-editorial tbody tr:hover{background:var(--lilac-2);}
+.table-editorial tbody td{
+  padding:18px 20px;
+  font-size:.86rem;color:var(--body);
+  vertical-align:top;line-height:1.6;
+}
+.table-editorial tbody td:first-child{
+  font-family:'Fraunces',serif;
+  font-size:1.2rem;font-weight:700;color:var(--mist);
+  text-align:center;padding-top:20px;
+}
+.table-editorial tbody tr:hover td:first-child{color:var(--lilac);}
+.table-editorial tbody td:nth-child(2){font-weight:600;color:var(--ink);}
+.table-editorial tbody td:nth-child(3){
+  font-family:'DM Sans',sans-serif;font-weight:700;color:var(--plum);
+  font-size:.82rem;
+}
+
+/* ═══════════════════════════════════
+   PROCESS TIMELINE
+═══════════════════════════════════ */
+.process-section{
+  background:var(--stone);
+  padding:100px 0;
+}
+.process-inner{max-width:1200px;margin:0 auto;padding:0 6%;}
+
+.timeline{
+  position:relative;
+  margin-top:64px;
+}
+/* vertical line */
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:32px;top:0;bottom:0;
+  width:2px;
+  background:linear-gradient(to bottom,var(--plum),var(--plum-mid),var(--mist));
+}
+
+.tl-item{
+  display:grid;
+  grid-template-columns:80px 1fr;
+  gap:32px;
+  margin-bottom:48px;
+  position:relative;
+}
+.tl-item:last-child{margin-bottom:0;}
+
+.tl-node{
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  position:relative;z-index:1;
+  padding-top:4px;
+}
+.tl-circle{
+  width:64px;height:64px;
+  border-radius:50%;
+  background:var(--plum);
+  border:4px solid white;
+  box-shadow:0 0 0 2px var(--plum);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  transition:all .3s;
+}
+.tl-circle:hover{background:var(--gold);box-shadow:0 0 0 2px var(--gold);}
+.tl-circle svg{width:24px;height:24px;fill:none;stroke:white;stroke-width:1.8;}
+
+.tl-body{
+  background:white;
+  border-radius:16px;
+  padding:28px 32px;
+  box-shadow:0 4px 20px rgba(77,16,74,.06);
+  border-left:4px solid transparent;
+  transition:all .3s;
+}
+.tl-body:hover{border-left-color:var(--plum);box-shadow:0 8px 36px rgba(77,16,74,.1);}
+
+.tl-step-num{
+  font-size:.68rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--plum);margin-bottom:8px;
+}
+.tl-body h3{
+  font-family:'Fraunces',serif;
+  font-size:1.2rem;font-weight:700;
+  color:var(--ink);margin-bottom:10px;
+}
+.tl-body p{font-size:.86rem;color:var(--body);line-height:1.7;}
+.tl-tag{
+  display:inline-block;
+  background:var(--lilac);color:var(--plum);
+  padding:4px 12px;border-radius:20px;
+  font-size:.69rem;font-weight:700;
+  margin-top:12px;
+}
+.tl-tag.gold{background:var(--gold-lt);color:#7A5C00;}
+
+/* ═══════════════════════════════════
+   CTA — full-bleed editorial
+═══════════════════════════════════ */
+.cta-section{
+  background:var(--plum);
+  padding:80px 0;
+  position:relative;overflow:hidden;
+}
+.cta-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.04) 1px,transparent 0);
+  background-size:24px 24px;
+}
+/* large watermark text */
+.cta-section::after{
+  content:'SKA';
+  position:absolute;right:-40px;top:50%;transform:translateY(-50%);
+  font-family:'Fraunces',serif;font-size:22rem;font-weight:900;
+  color:rgba(255,255,255,.03);line-height:1;
+  pointer-events:none;user-select:none;
+}
+.cta-inner{
+  max-width:1200px;margin:0 auto;padding:0 6%;
+  display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;
+  position:relative;z-index:1;
+}
+.cta-text{}
+.cta-eyebrow{
+  font-size:.68rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.cta-eyebrow::before{content:'';width:20px;height:2px;background:var(--gold);}
+.cta-title{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.6rem,3vw,2.4rem);font-weight:700;
+  color:white;line-height:1.2;margin-bottom:14px;
+}
+.cta-desc{color:rgba(239,222,249,.6);font-size:.9rem;line-height:1.7;max-width:520px;}
+.cta-perks{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px;}
+.cta-perk{
+  display:flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:600;color:rgba(239,222,249,.7);
+}
+.cta-perk svg{width:14px;height:14px;fill:none;stroke:var(--gold);stroke-width:2;}
+
+.cta-actions{display:flex;flex-direction:column;gap:12px;flex-shrink:0;}
+.btn-cta-main{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--gold);color:var(--ink);
+  padding:16px 32px;border-radius:11px;
+  font-weight:800;font-size:.92rem;text-decoration:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+  transition:all .25s;white-space:nowrap;
+}
+.btn-cta-main svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.5;}
+.btn-cta-main:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,.35);}
+.btn-cta-sec{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:transparent;color:rgba(239,222,249,.7);
+  padding:12px 24px;border-radius:9px;
+  border:1.5px solid rgba(239,222,249,.25);
+  font-weight:600;font-size:.86rem;text-decoration:none;
+  transition:all .25s;
+}
+.btn-cta-sec:hover{border-color:rgba(239,222,249,.55);color:white;}
+.btn-cta-sec svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;}
+
+/* ═══════════════════════════════════
+   FOOTER
+═══════════════════════════════════ */
+footer{
+  background:var(--ink);
+  padding:64px 6% 32px;
+}
+.footer-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:56px;
+  padding-bottom:40px;
+  border-bottom:1px solid rgba(239,222,249,.08);
+}
+.ft-logo{
+  display:flex;align-items:center;gap:11px;
+  text-decoration:none;margin-bottom:20px;
+}
+.ft-logo-ico{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,var(--plum),var(--plum-mid));
+  border-radius:9px;display:flex;align-items:center;justify-content:center;
+}
+.ft-logo-ico svg{width:18px;height:18px;fill:white;}
+.ft-logo-name{
+  font-family:'Fraunces',serif;
+  font-weight:700;font-size:1.1rem;color:white;
+}
+.ft-logo-sub{display:block;font-size:.65rem;color:rgba(239,222,249,.4);margin-top:1px;}
+.ft-contact{display:flex;flex-direction:column;gap:12px;}
+.ft-ci{display:flex;align-items:flex-start;gap:11px;}
+.ft-ci svg{width:14px;height:14px;fill:none;stroke:rgba(239,222,249,.4);stroke-width:1.8;flex-shrink:0;margin-top:2px;}
+.ft-ci span{color:rgba(255,255,255,.4);font-size:.78rem;line-height:1.65;}
+.ft-col h4{
+  font-size:.7rem;font-weight:700;color:rgba(239,222,249,.5);
+  text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;
+}
+.ft-links{display:flex;flex-direction:column;gap:3px;}
+.ft-links a{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:7px 0;color:rgba(255,255,255,.38);text-decoration:none;font-size:.8rem;
+  border-bottom:1px solid rgba(255,255,255,.04);transition:color .18s;
+}
+.ft-links a:last-child{border-bottom:none;}
+.ft-links a:hover{color:rgba(239,222,249,.85);}
+.ft-links a svg{width:10px;height:10px;fill:none;stroke:currentColor;stroke-width:2.5;opacity:.3;}
+.ft-social{display:flex;gap:9px;margin-top:18px;}
+.ft-social a{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;transition:background .2s;
+}
+.ft-social a:hover{background:var(--plum);}
+.ft-social a svg{width:15px;height:15px;fill:rgba(255,255,255,.5);}
+.footer-bottom{
+  max-width:1200px;margin:24px auto 0;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.footer-bottom p,.footer-bottom span{color:rgba(255,255,255,.2);font-size:.72rem;}
+.footer-bottom span{font-style:italic;}
+
+/* ═══════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.22,1,.36,1),transform .8s cubic-bezier(.22,1,.36,1);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.rv-d1{transition-delay:.1s;}.rv-d2{transition-delay:.2s;}.rv-d3{transition-delay:.3s;}.rv-d4{transition-delay:.4s;}
+.reveal-l{opacity:0;transform:translateX(-24px);transition:all .8s cubic-bezier(.22,1,.36,1);}
+.reveal-l.visible{opacity:1;transform:translateX(0);}
+
+/* ═══════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════ */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr 1fr;}
+  .hero-panel-l{padding:60px 40px 56px;}
+  .what-inner{grid-template-columns:1fr;gap:40px;}
+  .what-rail{position:static;}
+  .qual-grid{grid-template-columns:1fr 1fr;}
+  .class-section table thead th:last-child,
+  .class-section table tbody td:last-child{display:none;}
+  .cta-inner{grid-template-columns:1fr;text-align:center;}
+  .cta-perks{justify-content:center;}
+  .cta-actions{flex-direction:row;justify-content:center;}
+}
+@media(max-width:768px){
+  body{padding-top:62px;}
+  .hero{grid-template-columns:1fr;min-height:auto;}
+  .hero-panel-r{height:280px;}
+  .hero-panel-r::after{background:linear-gradient(to top,var(--plum) 0%,transparent 60%);}
+  .hero-num{display:none;}
+  .hero-float-badge{bottom:16px;right:16px;}
+  .qual-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr;gap:36px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+  .timeline::before{left:24px;}
+  .tl-item{grid-template-columns:56px 1fr;gap:20px;}
+  .tl-circle{width:48px;height:48px;}
+  .section-header{flex-direction:column;align-items:flex-start;}
+  .sh-right p{text-align:left;}
+}
+@media(max-width:480px){
+  .hero-panel-l{padding:40px 24px 44px;}
+  .hero-stats{gap:24px;}
+  .hero-btns{flex-direction:column;}
+  .cta-actions{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<!-- ═════════════════════════════
+     HERO — SPLIT SCREEN
+═════════════════════════════ -->
+<section class="hero">
+  <div class="hero-panel-l">
+    <div class="hero-num">01</div>
+    <div class="hero-vert-label">Sertifikasi &amp; Legalitas Konstruksi</div>
+
+    <div class="hero-tag">Layanan Sertifikasi</div>
+    <div class="hero-eyebrow">Tenaga Ahli Konstruksi</div>
+
+    <h1 class="hero-title">
+      Sertifikat<br>
+      <em>Keahlian</em><br>
+      (SKA)
+    </h1>
+
+    <p class="hero-desc">Pengakuan kompetensi resmi bagi tenaga ahli konstruksi Indonesia — diterbitkan LPJK, wajib dimiliki untuk menjalankan proyek berskala nasional.</p>
+
+    <div class="hero-btns">
+      <a href="#" class="btn-primary">
+        Konsultasi Gratis
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#kualifikasi" class="btn-ghost">Lihat Kualifikasi</a>
+    </div>
+
+    <div class="hero-stats">
+      <div>
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-lbl">Tingkat Kualifikasi</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">5+</span>
+        <span class="hero-stat-lbl">Klasifikasi Bidang</span>
+      </div>
+      <div>
+        <span class="hero-stat-num">500+</span>
+        <span class="hero-stat-lbl">Ahli Tersertifikasi</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-panel-r">
+    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&auto=format&fit=crop&q=80" alt="Tenaga Ahli Konstruksi">
+    <div class="hero-float-badge">
+      <div class="hero-float-ico">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <div class="hero-float-text">
+        <strong>Terakreditasi LPJK</strong>
+        <span>Diakui secara nasional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     WHAT IS SKA
+═════════════════════════════ -->
+<section class="what-section">
+  <div class="what-inner">
+    <div class="what-rail reveal-l">
+      <div class="rail-label">Tentang</div>
+      <h2 class="rail-title">Apa itu Sertifikat Keahlian?</h2>
+      <div class="rail-divider"></div>
+      <div class="rail-img">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&auto=format&fit=crop&q=80" alt="Engineer">
+      </div>
+    </div>
+
+    <div class="what-content">
+      <div class="what-lead reveal">
+        "Bukti kompetensi resmi yang menunjukkan kemampuan tenaga ahli konstruksi sesuai klasifikasi dan kualifikasinya."
+      </div>
+
+      <div class="what-body">
+        <p class="reveal rv-d1"><strong>Sertifikat Keahlian (SKA)</strong> adalah sertifikat yang diberikan kepada Tenaga Ahli yang bekerja di bidang konstruksi, yang dibutuhkan dengan menunjukan kemampuan dan keahlian tenaga ahli dalam melaksanakan pekerjaannya sesuai klasifikasi dan kualifikasinya. SKA berlaku selama <strong>3 (tiga) tahun sejak tanggal diterbitkan</strong>.</p>
+
+        <p class="reveal rv-d1"><strong>Lembaga Pengembangan Jasa Konstruksi (LPJK)</strong> atau asosiasi profesi yang terakreditasi LPJK adalah lembaga yang berwenang mengeluarkan sertifikat keahlian tenaga ahli konstruksi meliputi kualifikasi bidang: Arsitektur, Sipil, Mekanikal, Elektrikal, Tata Lingkungan dan Manajemen Pelaksanaan.</p>
+
+        <div class="note-card reveal rv-d2">
+          <p>Badan Usaha Jasa Konstruksi harus memiliki Tenaga Ahli sebagai <em>Penanggung Jawab Teknik (PJT)</em> dan <em>Penanggung Jawab Bidang (PJB)</em> dengan kualifikasi Ahli Muda, Ahli Madya atau Ahli Utama.</p>
+          <p>PJT dan PJB harus memiliki SKA dalam proses sertifikasi dan registrasi untuk mendapatkan Sertifikat Badan Usaha (SBU) yang dikeluarkan oleh LPJK.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     KUALIFIKASI
+═════════════════════════════ -->
+<section class="qual-section" id="kualifikasi">
+  <div class="qual-inner">
+    <div class="section-header reveal">
+      <div class="sh-left">
+        <div class="sh-eyebrow">Jenjang Kompetensi</div>
+        <h2 class="sh-title">Kualifikasi Sertifikat Keahlian</h2>
+      </div>
+      <div class="sh-right">
+        <p>Penetapan kualifikasi didasarkan latar belakang pendidikan dan pengalaman kerja tenaga ahli.</p>
+      </div>
+    </div>
+
+    <div class="qual-grid">
+      <!-- Ahli Muda -->
+      <div class="qual-card reveal rv-d1">
+        <div class="qual-card-num">01</div>
+        <span class="qual-card-badge">Ahli Muda</span>
+        <h3>Kualifikasi Ahli Muda</h3>
+        <span class="qual-range">Entry Level</span>
+        <ul class="qual-reqs">
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Latar belakang pendidikan teknik minimal D3 dengan pengalaman minimal 2 tahun
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            atau berpendidikan S1 tanpa pengalaman kerja minimum
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Cocok untuk PJT / PJB proyek skala kecil
+          </li>
+        </ul>
+      </div>
+
+      <!-- Ahli Madya -->
+      <div class="qual-card reveal rv-d2">
+        <div class="qual-card-num">02</div>
+        <span class="qual-card-badge" style="background:var(--gold-lt);color:#7A5C00;">Ahli Madya</span>
+        <h3>Kualifikasi Ahli Madya</h3>
+        <span class="qual-range gold">Mid Level</span>
+        <ul class="qual-reqs">
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Latar belakang pendidikan teknik minimal D3 dengan pengalaman 5 tahun
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            atau S1 dengan pengalaman minimal 2 tahun
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Wajib dimiliki sebagai PJT/PJB untuk proyek menengah ke atas
+          </li>
+        </ul>
+      </div>
+
+      <!-- Ahli Utama -->
+      <div class="qual-card reveal rv-d3">
+        <div class="qual-card-num">03</div>
+        <span class="qual-card-badge">Ahli Utama</span>
+        <h3>Kualifikasi Ahli Utama</h3>
+        <span class="qual-range">Senior Level</span>
+        <ul class="qual-reqs">
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Latar belakang pendidikan teknik minimal S1 dengan pengalaman 8 tahun
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            atau S2 dengan pengalaman minimal 5 tahun
+          </li>
+          <li>
+            <span class="req-ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></span>
+            Diperlukan untuk proyek nasional skala besar &amp; strategis
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     KLASIFIKASI TABLE
+═════════════════════════════ -->
+<section class="class-section">
+  <div class="class-inner">
+    <div class="section-header reveal">
+      <div class="sh-left">
+        <div class="sh-eyebrow">Bidang Usaha</div>
+        <h2 class="sh-title">Klasifikasi Bidang Usaha Jasa Konstruksi</h2>
+      </div>
+      <div class="sh-right">
+        <p>Setiap bidang usaha memiliki persyaratan kualifikasi SKA yang berbeda sesuai regulasi LPJK.</p>
+      </div>
+    </div>
+
+    <div class="reveal rv-d1" style="overflow-x:auto;">
+      <table class="table-editorial">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Klasifikasi Bidang Usaha</th>
+            <th>Kualifikasi SKA</th>
+            <th>Keterangan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>01</td>
+            <td>Jasa Pelaksana Konstruksi (Kontraktor)</td>
+            <td>Ahli Muda, Ahli Madya, Ahli Utama</td>
+            <td>Wajib memiliki PJT &amp; PJB sesuai klasifikasi dan kualifikasi bidang usaha.</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>Jasa Perencana dan Pengawas Konstruksi (Konsultan)</td>
+            <td>Ahli Muda, Ahli Madya, Ahli Utama</td>
+            <td>Wajib memiliki PJT &amp; PJB untuk semua kualifikasi K1 s/d B.</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>Jasa Konstruksi Terintegrasi (EPC)</td>
+            <td>Ahli Madya, Ahli Utama</td>
+            <td>Hanya untuk kualifikasi B1 dan B2, wajib Ahli Madya minimum.</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>Badan Usaha Jasa Konstruksi Asing (BUJKA)</td>
+            <td>Ahli Madya, Ahli Utama</td>
+            <td>Kualifikasi B2 — wajib memiliki PJT &amp; PJB bersertifikat Ahli Madya/Utama.</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>Badan Usaha Jasa Konstruksi Nasional (BUJKN)</td>
+            <td>Ahli Muda, Ahli Madya, Ahli Utama</td>
+            <td>Semua kualifikasi K1 s/d B2, wajib SKA sesuai klasifikasi usaha.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     PROCESS TIMELINE
+═════════════════════════════ -->
+<section class="process-section">
+  <div class="process-inner">
+    <div class="section-header reveal">
+      <div class="sh-left">
+        <div class="sh-eyebrow">Alur Pengurusan</div>
+        <h2 class="sh-title">Tahapan Mendapatkan SKA</h2>
+      </div>
+      <div class="sh-right">
+        <p>Proses terstruktur yang kami bantu dari awal hingga SKA diterbitkan oleh LPJK.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item reveal rv-d1">
+        <div class="tl-node">
+          <div class="tl-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-step-num">Langkah 01</div>
+          <h3>Persiapan Dokumen</h3>
+          <p>Pengumpulan dokumen persyaratan meliputi ijazah, transkrip nilai, KTP, NPWP, dan portofolio pengalaman kerja yang relevan sesuai bidang keahlian yang akan disertifikasi.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal rv-d2">
+        <div class="tl-node">
+          <div class="tl-circle">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-step-num">Langkah 02</div>
+          <h3>Pendaftaran Asosiasi Profesi</h3>
+          <p>Pendaftaran keanggotaan ke asosiasi profesi yang terakreditasi LPJK sesuai bidang keahlian. Keanggotaan asosiasi merupakan syarat utama pengajuan SKA.</p>
+          <span class="tl-tag gold">Berlaku 1 tahun</span>
+        </div>
+      </div>
+
+      <div class="tl-item reveal rv-d3">
+        <div class="tl-node">
+          <div class="tl-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-step-num">Langkah 03</div>
+          <h3>Uji Kompetensi &amp; Asessment</h3>
+          <p>Tenaga ahli mengikuti uji kompetensi yang diselenggarakan oleh asosiasi profesi. Penilaian meliputi pengetahuan teknis, pengalaman lapangan, dan kompetensi bidang spesifik.</p>
+        </div>
+      </div>
+
+      <div class="tl-item reveal rv-d4">
+        <div class="tl-node">
+          <div class="tl-circle">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+        </div>
+        <div class="tl-body">
+          <div class="tl-step-num">Langkah 04</div>
+          <h3>Penerbitan SKA oleh LPJK</h3>
+          <p>Setelah lulus uji kompetensi, LPJK menerbitkan Sertifikat Keahlian (SKA) resmi yang mencantumkan klasifikasi dan kualifikasi tenaga ahli. SKA dapat digunakan sebagai PJT/PJB dalam proses SBU.</p>
+          <span class="tl-tag">Berlaku 3 tahun</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     CTA
+═════════════════════════════ -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <div class="cta-eyebrow">Mulai Sekarang</div>
+      <h2 class="cta-title">Urus SKA Anda Bersama Tim Profesional Kami</h2>
+      <p class="cta-desc">Lebih dari 500 tenaga ahli telah berhasil mendapatkan SKA melalui pendampingan BRILIAN Consulting. Proses cepat, tepat, dan sesuai regulasi LPJK yang berlaku.</p>
+      <div class="cta-perks">
+        <div class="cta-perk"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Dokumen Aman &amp; Terjamin</div>
+        <div class="cta-perk"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Proses Lebih Cepat</div>
+        <div class="cta-perk"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>Konsultasi Gratis</div>
+      </div>
+    </div>
+    <div class="cta-actions">
+      <a href="#" class="btn-cta-main">
+        Konsultasi Gratis
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+      </a>
+      <a href="tel:02112345678" class="btn-cta-sec">
+        <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        021-1234-5678
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════════
+     FOOTER
+═════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="index.html" class="ft-logo">
+        <div class="ft-logo-ico"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <div>
+          <span class="ft-logo-name">BRILIAN</span>
+          <span class="ft-logo-sub">Konsultan Sertifikasi &amp; Legalitas</span>
+        </div>
+      </a>
+      <div class="ft-contact">
+        <div class="ft-ci"><svg viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg><span>PT. Monitatama Brilian (Brilian Consulting)<br>Jl. H. Dahlan Komplek Citra Loka No. 10<br>Duren Sawit, Jakarta 13440</span></div>
+        <div class="ft-ci"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span>021-860-2600 | 0813 8425 0004 (Monica)<br>0852 8669 9894 (Aji)</span></div>
+        <div class="ft-ci"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>brilanconsulting@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Layanan Kami</h4>
+      <div class="ft-links">
+        <a href="#">Sertifikat Keahlian (SKA) <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="jasa-pelaksana-konstruksi.html">Jasa Pelaksana Konstruksi <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="jasa-perencana-pengawas.html">Perencana &amp; Pengawas <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="bujka.html">BUJKA <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">Konstruksi Terintegrasi <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">SKUP MIGAS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">ISO/OHSAS <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="iujp.html">IUJP <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#">KADIN <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+    <div class="ft-col">
+      <h4>Ikuti Kami</h4>
+      <div class="ft-social">
+        <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+        <a href="#"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 BRILIAN Consulting. All Rights Reserved.</p>
+    <span>Solusi Sertifikasi &amp; Legalitas untuk Bisnis yang Lebih Kuat</span>
+  </div>
+</footer>
+
+<script>
+      fetch('navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    // load JS setelah HTML masuk
+    const script = document.createElement('script');
+    script.src = 'navbar.js';
+
+    script.onload = () => {
+      initNavbar(); // jalanin setelah JS ready
+    };
+
+    document.body.appendChild(script);
+  });
+  
+/* scroll reveal */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+},{threshold:.1});
+document.querySelectorAll('.reveal,.reveal-l').forEach(el => io.observe(el));
+
+/* inject navbar */
+(function(){
+  var w = document.getElementById('navbar');
+  fetch('navbar.html').then(r=>r.text()).then(html=>{
+    var doc = new DOMParser().parseFromString(html,'text/html');
+    doc.querySelectorAll('style').forEach(s=>document.head.appendChild(s.cloneNode(true)));
+    var nav = doc.getElementById('bn-root');
+    if(nav) w.appendChild(nav);
+    doc.querySelectorAll('script').forEach(s=>{
+      var ns = document.createElement('script');
+      ns.textContent = s.textContent;
+      document.body.appendChild(ns);
+    });
+  });
+})();
+</script>
+</body>
+</html>
